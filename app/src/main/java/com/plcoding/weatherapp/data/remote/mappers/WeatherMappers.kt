@@ -51,6 +51,11 @@ fun WeatherDto.toWeatherInfo(): WeatherInfo {
     }
     return WeatherInfo(
         weatherDataPerDay = weatherDataMap,
-        currentWeatherdata = currentWeatherData
+        currentWeatherdata = currentWeatherData,
+        klima1 = false,
+        klima2 = false,
+        klima3 = false,
+        klima4 = false,
+        klima5 = false
     )
 }

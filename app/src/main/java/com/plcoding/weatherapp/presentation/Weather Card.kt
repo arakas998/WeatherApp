@@ -36,7 +36,7 @@ fun WeatherCard(
     state.weatherInfo?.currentWeatherdata?.let { data ->
     Card (
         backgroundColor = backgroundColor,
-        shape = RoundedCornerShape(50.dp),
+        shape = RoundedCornerShape(30.dp),
         modifier = modifier.padding(40.dp)
         ){
         Column (
@@ -46,26 +46,26 @@ fun WeatherCard(
             horizontalAlignment = Alignment.CenterHorizontally
                 ){
 
-            Spacer(modifier = Modifier.height(40.dp))
+            Spacer(modifier = Modifier.height(2.dp))
 
             Image(painter = painterResource(id = data.weatherType.iconRes),
                 contentDescription = null,
-                modifier = Modifier.width(200.dp)
+                modifier = Modifier.width(50.dp)
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = "${data.temperatureCelsius } °C",
-                fontSize = 50.sp,
+                fontSize = 25.sp,
                 color = Color.White
             )
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(10.dp))
             Text(
                 text = data.weatherType.weatherDesc,
                 fontSize = 20.sp,
                 color = Color.White
             )
 
-            Spacer(modifier = Modifier.height(32.dp))
+            Spacer(modifier = Modifier.height(15.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
